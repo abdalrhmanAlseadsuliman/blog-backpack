@@ -41,7 +41,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
             'report' => false,
@@ -72,6 +72,13 @@ return [
     | the locations of the links and the values should be their targets.
     |
     */
+
+    'basset' => [
+        'driver' => 'local',
+        'root' => public_path('vendor/backpack/basset'),
+        'url' => env('APP_URL') . '/vendor/backpack/basset',
+        'visibility' => 'public',
+    ],
 
     'links' => [
         public_path('storage') => storage_path('app/public'),
